@@ -1,11 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LOL 메인화면</title>
+    <style>
+        body {
+            background-color: black;
+            font-family: '굴림', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* 네비게이션 컨테이너 스타일 */
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* 메뉴를 중앙 정렬 */
+            padding: 15px 5%;
+            position: relative; /* 로고를 절대 위치로 배치하기 위해 추가 */
+        }
+        .logo {
+            width: 150px;
+            height: auto;
+            position: absolute;
+            left: 5%; /* 왼쪽으로 배치 */
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 50px;
+            padding: 0;
+            margin: 0;
+        }
+        nav li {
+            font-size: 18px;
+            font-weight: bold;
+            font-style: italic;
+            color: white;
+            cursor: pointer;
+        }
+        nav li:hover {
+            color: #ffcc00;
+        }
+        hr {
+            width: 80%;
+            border: 1px solid gray;
+            margin: 20px auto;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <h1>helloworld</h1>
+
+    <!-- 내비게이션 컨테이너 -->
+    <div class="nav-container">
+        <img src="image/image.png" class="logo" alt="LOL 로고">
+        <nav>
+            <ul>
+                <li>게임정보</li>
+                <li>기본정보</li>
+                <li>챔피언</li>
+                <li>패치 노트</li>
+                <li>새소식</li>
+            </ul>
+        </nav>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <!-- 메인 이미지 -->
+        <img src="image/lol img.jpg" width="1200" height="768" alt="LOL 이미지">
+
+        <hr>
+
+        <!-- 회사 정보 -->
+        <h3 style="font-size: 20px; font-weight: bold; font-style: italic; color: white;">
+            라이엇 게임 회사 정보 2024년 X월 작성됨
+        </h3>
+    </div>
+
 </body>
 </html>
