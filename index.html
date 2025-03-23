@@ -3,31 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name=“author” content=“20210982”>
-    <meta name=“keywords” content=“computer”>
+    <meta name="author" content="20210982">
+    <meta name="keywords" content="computer">
     <base href="http://127.0.0.1:5500">
 
     <title>LOL 메인화면</title>
+
     <style>
         body {
             background-color: black;
             font-family: '굴림', sans-serif;
             margin: 0;
             padding: 0;
+            color: white; /* 전체 텍스트 색을 흰색으로 설정 */
         }
-        /* 네비게이션 컨테이너 스타일 */
         .nav-container {
             display: flex;
             align-items: center;
-            justify-content: center; /* 메뉴를 중앙 정렬 */
+            justify-content: center; 
             padding: 15px 5%;
-            position: relative; /* 로고를 절대 위치로 배치하기 위해 추가 */
+            position: relative;
         }
         .logo {
             width: 150px;
             height: auto;
             position: absolute;
-            left: 5%; /* 왼쪽으로 배치 */
+            left: 5%;
         }
         nav ul {
             list-style: none;
@@ -36,14 +37,14 @@
             padding: 0;
             margin: 0;
         }
-        nav li {
+        nav li a {
+            color: white;  
+            text-decoration: none; 
             font-size: 18px;
             font-weight: bold;
             font-style: italic;
-            color: white;
-            cursor: pointer;
         }
-        nav li:hover {
+        nav li a:hover {
             color: #ffcc00;
         }
         hr {
@@ -57,351 +58,103 @@
             align-items: center;
             text-align: center;
         }
+
+        /* 테이블 스타일 */
+        table {
+            width: 50%; /* 표 크기 조정 */
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #222;
+            border: 1px solid #333;
+        }
+        caption {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0;
+            color: white;
+        }
+        th, td {
+            border: 1px solid #444;
+            padding: 8px;
+            text-align: center;
+        }
+        tr:nth-child(odd) {
+            background-color: #333;
+        }
+        tr:nth-child(even) {
+            background-color: #444;
+        }
+        .highlight {
+            background-color: #ff4444;
+            color: white;
+        }
+        .highlight-gray {
+            background-color: #666;
+            color: white;
+        }
+        .bold-text {
+            font-weight: bold;
+            color: white;
+            background-color: #0057ff;
+        }
+        .larger-font {
+            font-size: 18px;
+        }
     </style>
 </head>
 <body>
 
-    <!-- 내비게이션 컨테이너 -->
-    <!DOCTYPE html>
-    <html lang="ko">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>LOL 메인화면</title>
-        <style>
-            body {
-                background-color: black;
-                font-family: '굴림', sans-serif;
-                margin: 0;
-                padding: 0;
-            }
-            /* 네비게이션 스타일 */
-            .nav-container {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 20px 5%;
-                position: relative;
-            }
-            .logo {
-                width: 150px;
-                height: auto;
-                position: absolute;
-                left: 5%;
-            }
-            nav ul {
-                list-style: none;
-                display: flex;
-                gap: 50px;
-                padding: 0;
-                margin: 0;
-            }
-            
-            nav li a {
-                color: white;  
-                text-decoration: none; 
-                font-size: 18px;
-                font-weight: bold;
-                font-style: italic;
-            }
-            /* 링크 호버 효과 */
-            nav li a:hover {
-                color: #ffcc00;
-            }
-            nav li:hover {
-                color: #ffcc00;
-            }
-            hr {
-                width: 80%;
-                border: 1px solid gray;
-                margin: 20px auto;
-            }
-            .container {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-        </style>
-    </head>
-    <body>
-    
-        <div class="nav-container">
-            <img src="C:\WEB\image\image.png" class="logo" alt="LOL 로고">
-            <nav>
-                <ul>
-                    <li><a href="https://www.leagueoflegends.com/ko-kr/how-to-play/" target="_blank">게임정보</a></li>
-                    <li><a href="https://www.leagueoflegends.com/ko-kr/news/" target="_blank">새소식</a></li>
-                    <li><a href="https://download.kr.riotgames.com/league" target="_blank">다운로드</a></li>
-                    <li><a href="https://lolesports.com/ko-KR/" target="_blank">E스포츠</a></li>
-                    <li><a href="https://events.kr.riotgames.com/lolpcbang" target="_blank">이벤트</a></li>
-                </ul>
-            </nav>
-        </div>
-    
+    <div class="nav-container">
+        <img src="C:\WEB_SKU_3_1\image\image.png" class="logo" alt="LOL 로고">
+        <nav>
+            <ul>
+                <li><a href="https://www.leagueoflegends.com/ko-kr/how-to-play/" target="_blank">게임정보</a></li>
+                <li><a href="https://www.leagueoflegends.com/ko-kr/news/" target="_blank">새소식</a></li>
+                <li><a href="https://download.kr.riotgames.com/league" target="_blank">다운로드</a></li>
+                <li><a href="https://lolesports.com/ko-KR/" target="_blank">E스포츠</a></li>
+                <li><a href="https://events.kr.riotgames.com/lolpcbang" target="_blank">이벤트</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <img src="C:\WEB_SKU_3_1\image\lol img.jpg" width="1200" height="768" alt="LOL 이미지">
+
+        <table>
+            <caption>인기 캐릭터</caption>
+            <tbody>
+                <tr style="background-color: skyblue; color: black; font-weight: bold;">
+                    <td>TOP</td>
+                    <td>JUNGLE</td>
+                    <td>MID</td>
+                    <td>BOTTOM</td>
+                    <td>SUPPORT</td>
+                </tr>
+                <tr class="highlight-gray">
+                    <td>사이온</td>
+                    <td>카직스</td>
+                    <td>아리</td>
+                    <td>루시안</td>
+                    <td>바이</td>
+                </tr>
+                <tr>
+                    <td>가렌</td>
+                    <td>리신</td>
+                    <td>제드</td>
+                    <td>애쉬</td>
+                    <td>알리스타</td>
+                </tr>
+            </tbody>
+        </table>
+
         <hr>
-    
-        <div class="container">
-            <img src="C:\WEB\image\lol img.jpg" width="1200" height="768" alt="LOL 이미지">
-            <!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>인기 캐릭터</title>
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse; /* 테이블 셀 사이 간격 제거 */
-        }
-        caption {
-            font-size: 24px;
-            font-weight: bold;
-            margin: 10px 0;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 10px;
-            text-align: center;
-        }
-        tr:nth-child(odd) {
-            background-color: #f2f2f2; /* 홀수 행 배경색 */
-        }
-        tr:nth-child(even) {
-            background-color: #d3d3d3; /* 짝수 행 배경색 */
-        }
-        .highlight {
-            background-color: red;
-            color: white;
-        }
-        .highlight-gray {
-            background-color: grey;
-            color: white;
-        }
-        .bold-text {
-            font-weight: bold;
-            color: white;
-            background-color: blue;
-        }
-        .larger-font {
-            font-size: 18px;
-        }
-    </style>
-</head>
-<body>
 
-    <!DOCTYPE html>
-    <html lang="ko">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>인기 캐릭터</title>
-        <style>
-            body {
-                background-color: black; /* 페이지 배경색 */
-                font-family: '굴림', sans-serif;
-                color: white; /* 글자색 */
-                margin: 0;
-                padding: 0;
-            }
-            table {
-                width: 50%; /* 표 크기 조정 */
-                margin: 20px auto;
-                border-collapse: collapse; /* 셀 간 간격 제거 */
-                background-color: #222; /* 표 배경을 어두운 색으로 설정 */
-                border: 1px solid #333; /* 테두리 색을 어두운 회색으로 설정 */
-            }
-            caption {
-                font-size: 20px;
-                font-weight: bold;
-                margin: 10px 0;
-                color: white;
-            }
-            th, td {
-                border: 1px solid #444; /* 셀 테두리 색을 어두운 회색으로 설정 */
-                padding: 8px;
-                text-align: center;
-            }
-            tr:nth-child(odd) {
-                background-color: #333; /* 홀수 행 배경 */
-            }
-            tr:nth-child(even) {
-                background-color: #444; /* 짝수 행 배경 */
-            }
-            .highlight {
-                background-color: #ff4444; /* 강조된 행 배경 (빨간색) */
-                color: white;
-            }
-            .highlight-gray {
-                background-color: #666; /* 강조된 행 배경 (회색) */
-                color: white;
-            }
-            .bold-text {
-                font-weight: bold;
-                color: white;
-                background-color: #0057ff; /* "카직스" 부분 배경 색 */
-            }
-            .larger-font {
-                font-size: 18px;
-            }
-        </style>
-    </head>
-    <body>
-    
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>인기 캐릭터</title>
-    <style>
-        body {
-            background-color: black; /* 페이지 배경색 */
-            font-family: '굴림', sans-serif;
-            color: white; /* 글자색 */
-            margin: 0;
-            padding: 0;
-        }
-        table {
-            width: 50%; /* 표 크기 조정 */
-            margin: 20px auto;
-            border-collapse: collapse; /* 셀 간 간격 제거 */
-            background-color: #222; /* 표 배경을 어두운 색으로 설정 */
-            border: 1px solid #333; /* 테두리 색을 어두운 회색으로 설정 */
-        }
-        caption {
-            font-size: 20px;
-            font-weight: bold;
-            margin: 10px 0;
-            color: white;
-        }
-        th, td {
-            border: 1px solid #444; /* 셀 테두리 색을 어두운 회색으로 설정 */
-            padding: 8px;
-            text-align: center;
-        }
-        tr:nth-child(odd) {
-            background-color: #333; /* 홀수 행 배경 */
-        }
-        tr:nth-child(even) {
-            background-color: #444; /* 짝수 행 배경 */
-        }
-        .highlight {
-            background-color: #ff4444; /* 강조된 행 배경 (빨간색) */
-            color: white;
-        }
-        .highlight-gray {
-            background-color: #666; /* 강조된 행 배경 (회색) */
-            color: white;
-        }
-        .bold-text {
-            font-weight: bold;
-            color: white;
-            background-color: #0057ff; /* "카직스" 부분 배경 색 */
-        }
-        .larger-font {
-            font-size: 18px;
-        }
-    </style>
-</head>
-<body>
-
-    <title>인기 캐릭터</title>
-    <style>
-        body {
-            background-color: black; /* 페이지 배경색 */
-            font-family: '굴림', sans-serif;
-            color: white; /* 글자색 */
-            margin: 0;
-            padding: 0;
-        }
-        table {
-            width: 50%; /* 표 크기 조정 */
-            margin: 20px auto;
-            border-collapse: collapse; /* 셀 간 간격 제거 */
-            background-color: #222; /* 표 배경을 어두운 색으로 설정 */
-            border: 1px solid #333; /* 테두리 색을 어두운 회색으로 설정 */
-        }
-        caption {
-            font-size: 20px;
-            font-weight: bold;
-            margin: 10px 0;
-            color: white;
-        }
-        th, td {
-            border: 1px solid #444; /* 셀 테두리 색을 어두운 회색으로 설정 */
-            padding: 8px;
-            text-align: center;
-        }
-        tr:nth-child(odd) {
-            background-color: #333; /* 홀수 행 배경 */
-        }
-        tr:nth-child(even) {
-            background-color: #444; /* 짝수 행 배경 */
-        }
-        .highlight {
-            background-color: #ff4444; /* 강조된 행 배경 (빨간색) */
-            color: white;
-        }
-        .highlight-gray {
-            background-color: #666; /* 강조된 행 배경 (회색) */
-            color: white;
-        }
-        .bold-text {
-            font-weight: bold;
-            color: white;
-            background-color: #0057ff; /* "카직스" 부분 배경 색 */
-        }
-        .larger-font {
-            font-size: 18px;
-        }
-    </style>
-</head>
-<body>
-
-<table>
-    <caption>인기 캐릭터</caption>
-    <tbody>
-        <tr style="background-color: skyblue">
-            <td>TOP</td>
-            <td>JUNGLE</td>
-            <td>MID</td>
-            <td>BOTTOM</td>
-            <td>SUPPORT</td>
-        </tr>
-        <!-- 두 번째 행: 캐릭터 이름들 -->
-        <tr class="highlight-gray">
-            <td>사이온</td>
-            <td>카직스</td>
-            <td>아리</td>
-            <td>루시안</td>
-            <td>바이</td>
-        </tr>
-        <!-- 세 번째 행: 추가 캐릭터들 -->
-        <tr>
-            <td>가렌</td>
-            <td>리신</td>
-            <td>제드</td>
-            <td>애쉬</td>
-            <td>알리스타</td>
-        </tr>
-    </tbody>
-</table>
+        <h3 style="font-size: 20px; font-weight: bold; font-style: italic; color: white;">
+            라이엇 게임 회사 정보 
+        </h3>
+    </div>
 
 </body>
 </html>
-
-    </body>
-    </html>
-    
-</body>
-</html>
-            <hr>
-    
-            <h3 style="font-size: 20px; font-weight: bold; font-style: italic; color: white;">
-                라이엇 게임 회사 정보 2024년 X월 작성됨
-            </h3>
-        </div>
-    
-    </body>
-    </html>
