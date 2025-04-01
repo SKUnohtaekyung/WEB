@@ -43,10 +43,7 @@ body {
     justify-content: space-between;
   }
 
-.hero img {
-    max-width: 100%;
-    height: auto;
-}
+
 
 .popular-champions h2 {
     font-size: 24px;
@@ -58,7 +55,7 @@ table {
     width: 50%;
     margin: 20px auto;
     border-collapse: collapse;
-    background-color: #222;
+    background-color: #222; 
     border: 1px solid #333;
 }
 
@@ -67,18 +64,14 @@ th, td {
     padding: 8px;
 }
 
+
 thead {
-    color: rgb(37, 163, 191);
+    color: rgb(28, 11, 156);
     font-weight: bold;
+    background-color: rgb(153, 187, 255);
 }
 
-tr:nth-child(odd) {
-    background-color: #333;
-}
 
-tr:nth-child(even) {
-    background-color: #333;
-}
 
 footer {
     padding: 20px;
