@@ -50,12 +50,12 @@ body {
 
 /* 네비게이션 항목들 정렬 및 간격 */
 .navbar-nav {
-  margin-left: 0 !important;   /* 기본 마진 초기화 */
-  margin-right: auto;         /* 왼쪽 정렬 */
+  /* margin-left: 0 !important;   기본 마진 초기화 */
+  /* margin-right: auto;         왼쪽 정렬 */
   display: flex;
   justify-content: space-between;
   width: 90%;
-  padding: 0 150px;           /* 좌우 여백 */
+  /* padding: 0 150px;           좌우 여백 */
 }
 
 /* 드롭다운 메뉴 폰트 크기 */
@@ -75,17 +75,18 @@ body {
 
 /* 돋보기 및 입력창 컨테이너 스타일 */
 .search-form {
-  position: absolute; 
+  /* position: absolute;  */
   right: 20px;
   display: flex;
   align-items: center;
   background: transparent;
   border-radius: 24px;
   padding: 5px;
+
   width: 40px;
   transition: width 0.4s ease-in-out, background 0.3s ease-in-out;
   overflow: hidden;
-  z-index: 2000; /* 메뉴보다 위에 */
+  /* z-index: 2000; 메뉴보다 위에 */
 }
 
 /* 돋보기 버튼 자체 (누를 수 있게 함) */
@@ -130,6 +131,23 @@ body {
   opacity: 1;
 }
 
+#login_btn {
+  white-space: nowrap;
+  background-color: rgb(71, 193, 241);
+  border-radius: 12px;
+  color: black;
+  padding: 8px 20px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#login_btn:hover {
+  color: #f4e668;
+}
 
 /* ============================== */
 /* 🎥 영상 및 이미지 오버레이 영역 */
@@ -206,3 +224,11 @@ footer {
   padding: 20px;
   background-color: #111;
 }
+
+@media (max-width: 992px) {
+  .search-form {
+    display: none !important;
+  }
+}
+
+
