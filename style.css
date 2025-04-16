@@ -225,10 +225,5 @@ footer {
   background-color: #111;
 }
 
-@media (max-width: 992px) {
-  .search-form {
-    display: none !important;
-  }
-}
 
 
