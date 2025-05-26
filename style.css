@@ -50,12 +50,9 @@ body {
 
 /* 네비게이션 항목들 정렬 및 간격 */
 .navbar-nav {
-  /* margin-left: 0 !important;   기본 마진 초기화 */
-  /* margin-right: auto;         왼쪽 정렬 */
   display: flex;
   justify-content: space-between;
   width: 90%;
-  /* padding: 0 150px;           좌우 여백 */
 }
 
 /* 드롭다운 메뉴 폰트 크기 */
@@ -75,7 +72,6 @@ body {
 
 /* 돋보기 및 입력창 컨테이너 스타일 */
 .search-form {
-  /* position: absolute;  */
   right: 20px;
   display: flex;
   align-items: center;
@@ -86,7 +82,6 @@ body {
   width: 40px;
   transition: width 0.4s ease-in-out, background 0.3s ease-in-out;
   overflow: hidden;
-  /* z-index: 2000; 메뉴보다 위에 */
 }
 
 /* 돋보기 버튼 자체 (누를 수 있게 함) */
@@ -149,6 +144,24 @@ body {
   color: #f4e668;
 }
 
+
+#logout_btn {
+  white-space: nowrap;
+  background-color: rgb(71, 193, 241);
+  border-radius: 12px;
+  color: black;
+  padding: 8px 20px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#logout_btn:hover {
+  color: #f4e668;
+}
 /* ============================== */
 /* 🎥 영상 및 이미지 오버레이 영역 */
 /* ============================== */
@@ -215,6 +228,55 @@ thead {
   background-color: rgb(153, 187, 255);
 }
 
+/* 영혼의 꽃  */
+.hero {
+  background-image: url('/image/main_2.avif');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  transform: translateY(-50%);
+  color: white;
+  text-align: left;
+  max-width: 600px;
+}
+
+.hero-text .subtitle {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-text .title {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero-text .description {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.hero-button {
+  display: inline-block;
+  background-color: #c1b657; /* 연노랑색 */
+  color: black;
+  padding: 16px 28px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #c6c089; /* 살짝 진한 노랑으로 hover 효과 */
+}
 
 /* ============================== */
 /* ⬛ 푸터 영역 */

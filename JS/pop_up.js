@@ -10,8 +10,8 @@ function pop_up() {
       "width=400, height=300, top=10, left=10"
     );
 
-    // 팝업 띄운 후, 쿠키 값을 'N'으로 설정 (1년 동안 유지)
-    setCookie("popupYN", "N", 365); // 1년 동안 쿠키 유지
+    // 팝업 띄운 후, 쿠키 값을 'N'으로 설정 (하루 동안 유지)
+    setCookie("popupYN", "N", 1); // 하루루 동안 쿠키 유지
   }
 }
 

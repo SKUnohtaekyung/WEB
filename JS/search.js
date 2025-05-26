@@ -1,6 +1,6 @@
 function googleSearch() {
   const searchTerm = document.getElementById("search_input").value.trim(); // 검색어로 설정 및 공백 제거
-  const forbiddenWords = ["바보", "멍청이", "ㅅㅂ", "씨발", "개새끼"]; // 비속어 리스트
+  const forbiddenWords = ["바보", "멍청이", "ㅅㅂ", "시발", "병신"]; // 비속어 리스트
 
   // 검색어 공백 검사
   if (searchTerm.length === 0) {
