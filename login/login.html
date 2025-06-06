@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="/login/login.css">
   <script src="/JS/login.js" defer></script>
   <script src="/JS/jwt_token.js" defer></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js" integrity="sha512-a+SUDuwNzXDvz4XrIcXHuCf089/iJAoN4lmrXJg18XnduKK6YlDHNRalv4yd1N40OKI80tFidF+rqTFKGPoWFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
@@ -40,7 +41,7 @@
                 <p class="small mb-5 pb-lg-2"><a class="text-black-50" href="#!">비밀번호를 잊으셨나요?</a></p>
 
                 <button type="button" class="btn custom-btn" id="login_btn">Login</button>
-                <div id="status_msg" style="margin-top:10px;color:red;font-weight:normal;border:none;"></div>
+                <div id="blockMsg" style="margin-top:10px; color:red;"></div>
                 <div class="checkboxmb-3 mt-5">
                   <label>
                   <input type="checkbox" value="remember-me" id="idSaveCheck"> 아이디 기억</label>

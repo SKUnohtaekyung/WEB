@@ -9,6 +9,7 @@
   <script src="/js/search.js" defer></script>
   <script src="js/Basic_js_text.js" defer></script>
   <script src="/JS/login.js" defer></script>
+  <script src="/JS/map.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js" integrity="sha512-a+SUDuwNzXDvz4XrIcXHuCf089/iJAoN4lmrXJg18XnduKK6YlDHNRalv4yd1N40OKI80tFidF+rqTFKGPoWFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body style="background-color: black;" onload ="init_logined()">
@@ -190,9 +191,30 @@
                   <a class="text-muted mb-0 address" href="https://m.map.kakao.com/actions/searchView?q=%EC%84%B1%EA%B2%B0%EB%8C%80%ED%95%99%EA%B5%90&wxEnc=LWQQNP&wyEnc=QOQSRNN&lvl=4">경기도 안양시 성결대학교</a>
                 </div>
               </div>
+              <hr>
+              <style>
+                #map {
+                  width: 100%;
+                  height: 400px;
+                }
+                #clickLatlng {
+                  margin-top: 10px;
+                  font-size: 16px;
+                }
+              </style>
+            </head>
+            <body>
+              <h5>🗺️ 지도를 클릭해보세요!</h5>
+              <br>
+
+              <div id="map"></div>
+              <div id="clickLatlng"></div>
+            
+              <!-- 카카오 맵 API 로드 -->
+              <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=bc19fd1fbd076ba27dafb488e8472493&autoload=false"></script>
+
             </div>
           </div>
-          <div id="map" style="width:100%;height:350px;"></div>
         </div>
       </div>
     </div>
