@@ -1,4 +1,4 @@
-// ✅ 전역 변수 정의
+// 전역 변수 정의
 const MAX_ATTEMPTS = 3;
 const LIMIT_TIME_MS = 60 * 1000; // 1분 제한
 const loginBtn = document.getElementById("login_btn");
@@ -8,7 +8,7 @@ const idsave_check = document.getElementById("idSaveCheck");
 const statusBox = document.getElementById("status_msg");
 const logoutBtn = document.getElementById("logout_btn"); // 로그아웃 버튼
 
-// ✅ 쿠키 관련 함수
+// 쿠키 관련 함수
 function setCookie(name, value, days) {
   const expires = new Date(Date.now() + days * 864e5).toUTCString();
   document.cookie = `${name}=${encodeURIComponent(
@@ -25,7 +25,7 @@ function deleteCookie(name) {
   document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
 }
 
-// ✅ XSS 필터링
+// XSS 필터링
 function check_xss(input) {
   const sanitized = input.replace(/</g, "&lt;").replace(/>/g, "&gt;");
   if (sanitized !== input) {
@@ -35,13 +35,13 @@ function check_xss(input) {
   return sanitized;
 }
 
-// ✅ 이메일 형식 검사
+// 이메일 형식 검사
 function validateEmailFormat(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 }
 
-// ✅ 로그인 실패 처리
+// 로그인 실패 처리
 function login_failed() {
   let failCount = parseInt(getCookie("login_fail")) || 0;
   failCount++;
@@ -59,7 +59,7 @@ function login_failed() {
   }
 }
 
-// ✅ 로그인 차단 상태 메시지 표시
+// 로그인 차단 상태 메시지 표시
 function showBlockStatus(blockUntil) {
   const interval = setInterval(() => {
     const remaining = blockUntil - Date.now();
@@ -81,7 +81,7 @@ function showBlockStatus(blockUntil) {
   }, 1000);
 }
 
-// ✅ AES 암호화/복호화 함수
+// AES 암호화/복호화 함수
 function encodeByAES256(key, data) {
   return CryptoJS.AES.encrypt(data, CryptoJS.enc.Utf8.parse(key), {
     iv: CryptoJS.enc.Utf8.parse("0000000000000000"),
@@ -98,7 +98,7 @@ function decodeByAES256(key, data) {
   return bytes.toString(CryptoJS.enc.Utf8);
 }
 
-// ✅ 암호화 실행 함수
+// 암호화 실행 함수
 function encrypt_text(password) {
   const k = "key";
   const rk = k.padEnd(32, " ");
@@ -107,7 +107,7 @@ function encrypt_text(password) {
   return eb;
 }
 
-// ✅ 복호화 실행 함수
+// 복호화 실행 함수
 function decrypt_text() {
   const k = "key";
   const rk = k.padEnd(32, " ");
@@ -116,7 +116,7 @@ function decrypt_text() {
   return b;
 }
 
-// ✅ 세션 저장
+// 세션 저장
 function session_set() {
   if (sessionStorage) {
     const session_id = emailInput.value;
@@ -130,7 +130,7 @@ function session_set() {
   }
 }
 
-// ✅ 로그인 후 복호화
+// 로그인 후 복호화
 function init_logined() {
   if (sessionStorage) {
     const decrypted = decrypt_text();
@@ -140,7 +140,7 @@ function init_logined() {
   }
 }
 
-// ✅ 세션에서 비밀번호 가져오기
+// 세션에서 비밀번호 가져오기
 function session_get() {
   if (sessionStorage) {
     return sessionStorage.getItem("Session_Storage_pass");
@@ -149,7 +149,7 @@ function session_get() {
   }
 }
 
-// ✅ 로그인 입력 검사
+// 로그인 입력 검사
 function check_input() {
   const rawEmail = emailInput.value.trim();
   const rawPassword = passwordInput.value.trim();
@@ -224,12 +224,12 @@ function check_input() {
   return true;
 }
 
-// ✅ 로그인 버튼 숨기기/보이기 함수
+// 로그인 버튼 숨기기/보이기 함수
 function setLoginButtonVisibility(isVisible) {
   loginBtn.style.visibility = isVisible ? "visible" : "hidden";
 }
 
-// ✅ 로그인 상태 확인 (이제 버튼 누를 때만 실행됨)
+// 로그인 상태 확인 (이제 버튼 누를 때만 실행됨)
 function session_check() {
   const isLoggedIn = sessionStorage.getItem("is_logged_in");
   if (isLoggedIn && isLoggedIn === "true") {
@@ -239,7 +239,7 @@ function session_check() {
   return false;
 }
 
-// ✅ 로그아웃 함수 (세션 + 토큰 완전 삭제 + 페이지 이동)
+// 로그아웃 함수 (세션 + 토큰 완전 삭제 + 페이지 이동)
 function logout() {
   sessionStorage.clear(); // 세션 저장소 완전 초기화
   localStorage.removeItem("access_token"); // JWT 토큰 삭제
@@ -250,7 +250,7 @@ function logout() {
   window.location.replace("index.html"); // 로그인 페이지 경로에 맞게 수정
 }
 
-// ✅ 초기화 함수
+// 초기화 함수
 function init() {
   const savedId = getCookie("id");
   const blockUntil = parseInt(getCookie("login_block"));
@@ -268,7 +268,7 @@ function init() {
   }
 }
 
-// ✅ 로그인 버튼 이벤트 등록
+// 로그인 버튼 이벤트 등록
 loginBtn.addEventListener("click", () => {
   if (session_check()) return;
 
