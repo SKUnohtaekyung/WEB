@@ -61,6 +61,7 @@ function login_failed() {
 
 // 로그인 차단 상태 메시지 표시
 function showBlockStatus(blockUntil) {
+  const statusBox = document.getElementById("blockMsg");
   const interval = setInterval(() => {
     const remaining = blockUntil - Date.now();
     if (remaining <= 0) {
@@ -78,7 +79,7 @@ function showBlockStatus(blockUntil) {
           ${seconds}초 후 다시 시도해주세요.
         </div>`;
     }
-  }, 1000);
+  }, 1000); 
 }
 
 // AES 암호화/복호화 함수
@@ -278,12 +279,12 @@ loginBtn.addEventListener("click", () => {
   }
 });
 
-// ✅ 로그아웃 버튼 이벤트 등록
+// 로그아웃 버튼 이벤트 등록
 if (logoutBtn) {
   logoutBtn.addEventListener("click", logout);
 }
 
-// ✅ 페이지 로딩 시 초기화
+// 페이지 로딩 시 초기화
 window.onload = init;
 
 function init_logined() {

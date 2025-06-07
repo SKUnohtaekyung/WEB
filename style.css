@@ -1,30 +1,29 @@
-/* ✅ 기본 전체 폰트 지정 */
+/* 기본 전체 폰트 지정 */
 * {
-  font-family: Noto sans-serif;
+  font-family: 'Noto Sans', sans-serif; /* 폰트 이름 띄어쓰기 수정 */
 }
 
-/* ✅ body 전체 기본 스타일 */
+/* body 기본 스타일 */
 body {
-  /* background-color: black; */  /* 배경색 테스트용 (비활성화) */
-  margin: 0;
-  padding: 0;
-  color: white;
-  text-align: center;
+  margin: 0;              /* 기본 여백 제거 */
+  padding: 0;             /* 기본 패딩 제거 */
+  color: white;           /* 글자 색상 흰색 */
+  text-align: center;     /* 텍스트 중앙 정렬 */
+  /* background-color: black; */ /* 배경색 테스트용 (비활성화) */
 }
 
-
 /* ============================== */
-/* 🔷 네비게이션 바 관련 스타일 */
+/* 네비게이션 바 관련 스타일 */
 /* ============================== */
 
-/* 네비게이션 바 배경 및 여백 설정 */
+/* 네비게이션 바 배경과 위아래 여백 설정 */
 .navbar {
   background-color: black !important;
   margin-top: 15px;
   margin-bottom: 10px;
 }
 
-/* 네비게이션 링크 텍스트 스타일 */
+/* 네비게이션 링크 텍스트 색상과 굵기 */
 .navbar-nav .nav-link {
   color: white !important;
   font-weight: bold;
@@ -35,7 +34,7 @@ body {
   background-color: #333 !important;
 }
 
-/* 드롭다운 메뉴 항목 텍스트 스타일 */
+/* 드롭다운 항목 텍스트 스타일 */
 .navbar .dropdown-item {
   color: white !important;
   letter-spacing: 2px;
@@ -43,34 +42,33 @@ body {
   margin-bottom: 5px;
 }
 
-/* 드롭다운 hover 시 배경 강조 */
+/* 드롭다운 항목 호버 시 배경색 변경 */
 .navbar .dropdown-item:hover {
   background-color: #444 !important;
 }
 
-/* 네비게이션 항목들 정렬 및 간격 */
+/* 네비게이션 항목들 flex 배치 및 간격 조정 */
 .navbar-nav {
   display: flex;
   justify-content: space-between;
   width: 90%;
 }
 
-/* 드롭다운 메뉴 폰트 크기 */
+/* 드롭다운 메뉴 폰트 크기 지정 */
 .navbar-nav .dropdown-menu {
   font-size: 15px;
 }
 
-/* 네비게이션 링크 hover 시 색상 변경 */
+/* 네비게이션 링크 호버 시 색상 변경 */
 .navbar-nav .nav-link:hover {
   color: #a9910c !important;
 }
 
-
 /* ============================== */
-/* 🔍 검색창(돋보기) 관련 스타일 */
+/* 검색창 (돋보기) 관련 스타일 */
 /* ============================== */
 
-/* 돋보기 및 입력창 컨테이너 스타일 */
+/* 돋보기 + 입력창 감싸는 컨테이너 */
 .search-form {
   right: 20px;
   display: flex;
@@ -79,21 +77,21 @@ body {
   border-radius: 24px;
   padding: 5px;
 
-  width: 40px;
+  width: 40px;                             /* 기본 접힌 상태 너비 */
   transition: width 0.4s ease-in-out, background 0.3s ease-in-out;
-  overflow: hidden;
+  overflow: hidden;                       /* 내부 내용 넘침 방지 */
 }
 
-/* 돋보기 버튼 자체 (누를 수 있게 함) */
+/* 돋보기 버튼 스타일 (클릭 가능) */
 .search-icon {
   background: none;
   border: none;
   cursor: pointer;
   padding: 5px;
-  z-index: 10;
+  z-index: 10;                           /* 입력창 위에 위치 */
 }
 
-/* 돋보기 이미지 사이즈 및 애니메이션 */
+/* 돋보기 이미지 크기와 애니메이션 */
 .search-img {
   width: 30px;
   height: 30px;
@@ -109,25 +107,27 @@ body {
   padding: 5px;
   background: transparent;
   color: white;
-  opacity: 0;
+  opacity: 0;                            /* 투명 처리 */
   transition: width 0.4s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-/* 활성화되었을 때 (돋보기를 눌렀을 때) */
+/* 검색창 활성화 시 스타일 */
 .search-form.active {
-  width: 250px;
+  width: 250px;                         /* 펼쳐진 너비 */
   background: #333;
   padding-left: 10px;
 }
 
-/* 입력창 보이기 */
+/* 활성화 상태에서 입력창 보이기 */
 .search-form.active .search-input {
   width: 100%;
-  opacity: 1;
+  opacity: 1;                          /* 불투명 처리 */
 }
 
+/* ============================== */
+/* 로그인 버튼 스타일 */
 #login_btn {
-  white-space: nowrap;
+  white-space: nowrap;                /* 줄 바꿈 방지 */
   background-color: rgb(71, 193, 241);
   border-radius: 12px;
   color: black;
@@ -140,11 +140,13 @@ body {
   margin-right: 10px;
 }
 
+/* 로그인 버튼 호버 시 텍스트 색 변경 */
 #login_btn:hover {
   color: #f4e668;
 }
 
-
+/* ============================== */
+/* 로그아웃 버튼 스타일 (로그인 버튼과 동일) */
 #logout_btn {
   white-space: nowrap;
   background-color: rgb(71, 193, 241);
@@ -159,15 +161,16 @@ body {
   margin-right: 10px;
 }
 
-
+/* 로그아웃 버튼 호버 시 텍스트 색 변경 */
 #logout_btn:hover {
   color: #f4e668;
 }
+
 /* ============================== */
-/* 🎥 영상 및 이미지 오버레이 영역 */
+/* 영상 및 이미지 오버레이 영역 */
 /* ============================== */
 
-/* 영상 전체 감싸는 wrapper */
+/* 비디오 감싸는 래퍼 (화면 전체 크기) */
 .video-wrapper {
   position: relative;
   width: 100vw;
@@ -175,18 +178,18 @@ body {
   overflow: hidden;
 }
 
-/* 백그라운드 비디오 스타일 */
+/* 배경 비디오 스타일 (화면 꽉 채움) */
 .bg-video {
   position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
   min-height: 100%;
-  object-fit: cover;
+  object-fit: cover;          /* 비디오 비율 유지하며 채우기 */
   z-index: 1;
 }
 
-/* 오버레이 이미지 (중앙에 배치) */
+/* 오버레이 이미지 중앙 배치 */
 .overlay-img {
   position: absolute;
   top: 50%;
@@ -196,27 +199,27 @@ body {
   z-index: 2;
 }
 
-
 /* ============================== */
-/* 📊 인기 챔피언 테이블 영역 */
+/* 인기 챔피언 테이블 영역 */
 /* ============================== */
 
+/* 제목 스타일 */
 .popular-champions h2 {
   font-size: 24px;
   margin-bottom: 10px;
   color: cornflowerblue;
 }
 
-/* 표 스타일 */
+/* 테이블 기본 스타일 */
 table {
-  width: 50%;
+  width: 50%;                  /* 너비 고정 */
   margin: 20px auto;
-  border-collapse: collapse;
-  background-color: #222; 
+  border-collapse: collapse;  /* 테두리 겹침 제거 */
+  background-color: #222;
   border: 1px solid #333;
 }
 
-/* 테이블 셀 스타일 */
+/* 테이블 셀 테두리와 패딩 */
 th, td {
   border: 1px solid #444;
   padding: 8px;
@@ -229,7 +232,11 @@ thead {
   background-color: rgb(153, 187, 255);
 }
 
-/* 영혼의 꽃  */
+/* ============================== */
+/* 영혼의 꽃 히어로 섹션 */
+/* ============================== */
+
+/* 히어로 배경 이미지 및 전체 높이 설정 */
 .hero {
   background-image: url('/image/main_2.avif');
   background-size: cover;
@@ -240,6 +247,7 @@ thead {
   font-family: 'Arial', sans-serif;
 }
 
+/* 텍스트 위치 및 스타일 */
 .hero-text {
   position: absolute;
   top: 50%;
@@ -266,9 +274,10 @@ thead {
   margin-bottom: 25px;
 }
 
+/* 히어로 버튼 스타일 및 호버 효과 */
 .hero-button {
   display: inline-block;
-  background-color: #c1b657; /* 연노랑색 */
+  background-color: #c1b657;
   color: black;
   padding: 16px 28px;
   text-decoration: none;
@@ -276,17 +285,14 @@ thead {
 }
 
 .hero-button:hover {
-  background-color: #c6c089; /* 살짝 진한 노랑으로 hover 효과 */
+  background-color: #c6c089;
 }
 
 /* ============================== */
-/* ⬛ 푸터 영역 */
+/* 푸터 영역 */
 /* ============================== */
 
 footer {
   padding: 20px;
   background-color: #111;
 }
-
-
-
